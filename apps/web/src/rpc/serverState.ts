@@ -12,7 +12,7 @@ import {
 } from "@t3tools/contracts";
 import { Atom } from "effect/unstable/reactivity";
 
-import type { WsRpcClient } from "../wsRpcClient";
+import type { WsRpcClient } from "../runtime/wsRpcClient";
 import { appAtomRegistry, resetAppAtomRegistryForTests } from "./atomRegistry";
 
 export type ServerConfigUpdateSource = ServerConfigStreamEvent["type"];

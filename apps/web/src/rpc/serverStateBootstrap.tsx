@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { getWsRpcClient } from "../wsRpcClient";
+import { getWsRpcClient } from "../runtime/wsRpcClient";
 import { startServerStateSync } from "./serverState";
 
 export function ServerStateBootstrap() {

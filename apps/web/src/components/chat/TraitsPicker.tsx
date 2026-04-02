@@ -28,8 +28,8 @@ import {
   MenuSeparator as MenuDivider,
   MenuTrigger,
 } from "../ui/menu";
-import { useComposerDraftStore } from "../../composerDraftStore";
-import { getProviderModelCapabilities } from "../../providerModels";
+import { useComposerDraftStore } from "../../chat/composerDraftStore";
+import { getProviderModelCapabilities } from "../../providers/providerModels";
 import { cn } from "~/lib/utils";
 
 type ProviderOptions = ProviderModelOptions[ProviderKind];

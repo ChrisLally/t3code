@@ -6,8 +6,8 @@ import {
   normalizePlanMarkdownForExport,
   proposedPlanTitle,
   stripDisplayedPlanMarkdown,
-} from "../../proposedPlan";
-import ChatMarkdown from "../ChatMarkdown";
+} from "../../chat/proposedPlan";
+import ChatMarkdown from "./ChatMarkdown";
 import { EllipsisIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
@@ -24,7 +24,7 @@ import {
   DialogTitle,
 } from "../ui/dialog";
 import { toastManager } from "../ui/toast";
-import { readNativeApi } from "~/nativeApi";
+import { readNativeApi } from "~/runtime/nativeApi";
 import { useCopyToClipboard } from "~/hooks/useCopyToClipboard";
 
 export const ProposedPlanCard = memo(function ProposedPlanCard({

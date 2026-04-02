@@ -4,9 +4,9 @@ import { useEffect } from "react";
 import { useHandleNewThread } from "../hooks/useHandleNewThread";
 import { isTerminalFocused } from "../lib/terminalFocus";
 import { resolveShortcutCommand } from "../keybindings";
-import { selectThreadTerminalState, useTerminalStateStore } from "../terminalStateStore";
-import { useThreadSelectionStore } from "../threadSelectionStore";
-import { resolveSidebarNewThreadEnvMode } from "~/components/Sidebar.logic";
+import { selectThreadTerminalState, useTerminalStateStore } from "../state/terminalStateStore";
+import { useThreadSelectionStore } from "../state/threadSelectionStore";
+import { resolveSidebarNewThreadEnvMode } from "~/components/sidebar/Sidebar.logic";
 import { useSettings } from "~/hooks/useSettings";
 import { useServerKeybindings } from "~/rpc/serverState";
 

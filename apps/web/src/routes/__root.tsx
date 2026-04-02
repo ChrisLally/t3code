@@ -15,11 +15,11 @@ import { QueryClient, useQueryClient } from "@tanstack/react-query";
 import { Throttler } from "@tanstack/react-pacer";
 
 import { APP_DISPLAY_NAME } from "../branding";
-import { AppSidebarLayout } from "../components/AppSidebarLayout";
+import { AppSidebarLayout } from "../components/layout/AppSidebarLayout";
 import { Button } from "../components/ui/button";
 import { AnchoredToastProvider, ToastProvider, toastManager } from "../components/ui/toast";
-import { resolveAndPersistPreferredEditor } from "../editorPreferences";
-import { readNativeApi } from "../nativeApi";
+import { resolveAndPersistPreferredEditor } from "../runtime/editorPreferences";
+import { readNativeApi } from "../runtime/nativeApi";
 import {
   getServerConfigUpdatedNotification,
   type ServerConfigUpdateSource,
@@ -32,17 +32,17 @@ import {
   clearPromotedDraftThread,
   clearPromotedDraftThreads,
   useComposerDraftStore,
-} from "../composerDraftStore";
-import { useStore } from "../store";
-import { useUiStateStore } from "../uiStateStore";
-import { useTerminalStateStore } from "../terminalStateStore";
-import { terminalRunningSubprocessFromEvent } from "../terminalActivity";
+} from "../chat/composerDraftStore";
+import { useStore } from "../state/store";
+import { useUiStateStore } from "../state/uiStateStore";
+import { useTerminalStateStore } from "../state/terminalStateStore";
+import { terminalRunningSubprocessFromEvent } from "../terminal/terminalActivity";
 import { migrateLocalSettingsToServer } from "../hooks/useSettings";
-import { providerQueryKeys } from "../lib/providerReactQuery";
-import { projectQueryKeys } from "../lib/projectReactQuery";
+import { projectQueryKeys } from "../git/projectReactQuery";
+import { providerQueryKeys } from "../providers/providerReactQuery";
 import { collectActiveTerminalThreadIds } from "../lib/terminalStateCleanup";
-import { deriveOrchestrationBatchEffects } from "../orchestrationEventEffects";
-import { createOrchestrationRecoveryCoordinator } from "../orchestrationRecovery";
+import { deriveOrchestrationBatchEffects } from "../orchestration/orchestrationEventEffects";
+import { createOrchestrationRecoveryCoordinator } from "../orchestration/orchestrationRecovery";
 
 export const Route = createRootRouteWithContext<{
   queryClient: QueryClient;

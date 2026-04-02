@@ -1,5 +1,5 @@
 import { type MessageId } from "@t3tools/contracts";
-import { type TimelineEntry, type WorkLogEntry } from "../../session-logic";
+import { type TimelineEntry, type WorkLogEntry } from "../../chat/session-logic";
 import { buildTurnDiffTree, type TurnDiffTreeNode } from "../../lib/turnDiffTree";
 import { type ChatMessage, type ProposedPlan, type TurnDiffSummary } from "../../types";
 import { estimateTimelineMessageHeight } from "../timelineHeight";

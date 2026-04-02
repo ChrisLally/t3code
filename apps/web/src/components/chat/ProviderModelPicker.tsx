@@ -2,7 +2,7 @@ import { type ProviderKind, type ServerProvider } from "@t3tools/contracts";
 import { resolveSelectableModel } from "@t3tools/shared/model";
 import { memo, useState } from "react";
 import type { VariantProps } from "class-variance-authority";
-import { type ProviderPickerKind, PROVIDER_OPTIONS } from "../../session-logic";
+import { type ProviderPickerKind, PROVIDER_OPTIONS } from "../../chat/session-logic";
 import { ChevronDownIcon } from "lucide-react";
 import { Button, buttonVariants } from "../ui/button";
 import {
@@ -20,7 +20,7 @@ import {
 } from "../ui/menu";
 import { ClaudeAI, CursorIcon, Gemini, Icon, OpenAI, OpenCodeIcon } from "../Icons";
 import { cn } from "~/lib/utils";
-import { getProviderSnapshot } from "../../providerModels";
+import { getProviderSnapshot } from "../../providers/providerModels";
 
 function isAvailableProviderOption(option: (typeof PROVIDER_OPTIONS)[number]): option is {
   value: ProviderKind;

@@ -7,7 +7,7 @@ import { render } from "vitest-browser-react";
 
 import { CompactComposerControlsMenu } from "./CompactComposerControlsMenu";
 import { TraitsMenuContent } from "./TraitsPicker";
-import { useComposerDraftStore } from "../../composerDraftStore";
+import { useComposerDraftStore } from "../../chat/composerDraftStore";
 
 async function mountMenu(props?: { modelSelection?: ModelSelection; prompt?: string }) {
   const threadId = ThreadId.makeUnsafe("thread-compact-menu");
