@@ -5,7 +5,7 @@ import { isElectron } from "../../env";
 import {
   setDesktopUpdateStateQueryData,
   useDesktopUpdateState,
-} from "../../lib/desktopUpdateReactQuery";
+} from "../../runtime/desktopUpdateReactQuery";
 import { toastManager } from "../ui/toast";
 import {
   getArm64IntelBuildWarningDescription,

@@ -4,7 +4,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { render } from "vitest-browser-react";
 
 import { ProviderModelPicker } from "./ProviderModelPicker";
-import { getCustomModelOptionsByProvider } from "../../modelSelection";
+import { getCustomModelOptionsByProvider } from "../../providers/modelSelection";
 import { DEFAULT_UNIFIED_SETTINGS } from "@t3tools/contracts/settings";
 
 function effort(value: string, isDefault = false) {

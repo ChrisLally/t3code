@@ -19,11 +19,11 @@ import {
   type VirtualItem,
   useVirtualizer,
 } from "@tanstack/react-virtual";
-import { deriveTimelineEntries, formatElapsed } from "../../session-logic";
-import { AUTO_SCROLL_BOTTOM_THRESHOLD_PX } from "../../chat-scroll";
+import { deriveTimelineEntries, formatElapsed } from "../../chat/session-logic";
+import { AUTO_SCROLL_BOTTOM_THRESHOLD_PX } from "../../chat/chat-scroll";
 import { type TurnDiffSummary } from "../../types";
 import { summarizeTurnDiffStats } from "../../lib/turnDiffTree";
-import ChatMarkdown from "../ChatMarkdown";
+import ChatMarkdown from "./ChatMarkdown";
 import {
   BotIcon,
   CheckIcon,
@@ -43,7 +43,7 @@ import {
 } from "lucide-react";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
-import { type ComposerImageAttachment } from "../../composerDraftStore";
+import { type ComposerImageAttachment } from "../../chat/composerDraftStore";
 import { clamp } from "effect/Number";
 import { buildExpandedImagePreview, ExpandedImagePreview } from "./ExpandedImagePreview";
 import { ProposedPlanCard } from "./ProposedPlanCard";
@@ -591,8 +591,6 @@ export const MessagesTimeline = memo(function MessagesTimeline({
   );
 });
 
-type TimelineEntry = ReturnType<typeof deriveTimelineEntries>[number];
-type TimelineMessage = Extract<TimelineEntry, { kind: "message" }>["message"];
 type TimelineWorkEntry = Extract<MessagesTimelineRow, { kind: "work" }>["groupedEntries"][number];
 type TimelineRow = MessagesTimelineRow;
 

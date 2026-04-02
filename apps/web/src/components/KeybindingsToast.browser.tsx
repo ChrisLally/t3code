@@ -16,10 +16,10 @@ import { setupWorker } from "msw/browser";
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { render } from "vitest-browser-react";
 
-import { useComposerDraftStore } from "../composerDraftStore";
-import { __resetNativeApiForTests } from "../nativeApi";
+import { useComposerDraftStore } from "../chat/composerDraftStore";
+import { __resetNativeApiForTests } from "../runtime/nativeApi";
 import { getRouter } from "../router";
-import { useStore } from "../store";
+import { useStore } from "../state/store";
 import { BrowserWsRpcHarness } from "../../test/wsRpcHarness";
 
 const THREAD_ID = "thread-kb-toast-test" as ThreadId;

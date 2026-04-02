@@ -3,15 +3,18 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useNavigate, useParams } from "@tanstack/react-router";
 import { useCallback } from "react";
 
-import { getFallbackThreadIdAfterDelete } from "../components/Sidebar.logic";
-import { useComposerDraftStore } from "../composerDraftStore";
+import { getFallbackThreadIdAfterDelete } from "../components/sidebar/Sidebar.logic";
+import { useComposerDraftStore } from "../chat/composerDraftStore";
 import { useHandleNewThread } from "./useHandleNewThread";
-import { gitRemoveWorktreeMutationOptions } from "../lib/gitReactQuery";
+import { gitRemoveWorktreeMutationOptions } from "../git/gitReactQuery";
 import { newCommandId } from "../lib/utils";
-import { readNativeApi } from "../nativeApi";
-import { useStore } from "../store";
-import { useTerminalStateStore } from "../terminalStateStore";
-import { formatWorktreePathForDisplay, getOrphanedWorktreePathForThread } from "../worktreeCleanup";
+import { readNativeApi } from "../runtime/nativeApi";
+import { useStore } from "../state/store";
+import { useTerminalStateStore } from "../state/terminalStateStore";
+import {
+  formatWorktreePathForDisplay,
+  getOrphanedWorktreePathForThread,
+} from "../git/worktreeCleanup";
 import { toastManager } from "../components/ui/toast";
 import { useSettings } from "./useSettings";
 

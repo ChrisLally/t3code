@@ -6,12 +6,12 @@ import {
   type DraftThreadEnvMode,
   type DraftThreadState,
   useComposerDraftStore,
-} from "../composerDraftStore";
+} from "../chat/composerDraftStore";
 import { newThreadId } from "../lib/utils";
-import { orderItemsByPreferredIds } from "../components/Sidebar.logic";
-import { useStore } from "../store";
-import { useThreadById } from "../storeSelectors";
-import { useUiStateStore } from "../uiStateStore";
+import { orderItemsByPreferredIds } from "../components/sidebar/Sidebar.logic";
+import { useStore } from "../state/store";
+import { useThreadById } from "../state/storeSelectors";
+import { useUiStateStore } from "../state/uiStateStore";
 
 export function useHandleNewThread() {
   const projectIds = useStore(useShallow((store) => store.projects.map((project) => project.id)));

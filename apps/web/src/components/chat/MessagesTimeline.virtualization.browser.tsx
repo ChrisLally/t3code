@@ -6,7 +6,7 @@ import { useCallback, useState, type ComponentProps } from "react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { render } from "vitest-browser-react";
 
-import { deriveTimelineEntries, type WorkLogEntry } from "../../session-logic";
+import { deriveTimelineEntries, type WorkLogEntry } from "../../chat/session-logic";
 import { type ChatMessage, type ProposedPlan, type TurnDiffSummary } from "../../types";
 import { MessagesTimeline } from "./MessagesTimeline";
 import {

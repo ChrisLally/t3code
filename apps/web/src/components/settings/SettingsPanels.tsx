@@ -31,7 +31,7 @@ import {
 } from "../../components/desktopUpdate.logic";
 import { ProviderModelPicker } from "../chat/ProviderModelPicker";
 import { TraitsPicker } from "../chat/TraitsPicker";
-import { resolveAndPersistPreferredEditor } from "../../editorPreferences";
+import { resolveAndPersistPreferredEditor } from "../../runtime/editorPreferences";
 import { isElectron } from "../../env";
 import { useTheme } from "../../hooks/useTheme";
 import { useSettings, useUpdateSettings } from "../../hooks/useSettings";
@@ -39,14 +39,14 @@ import { useThreadActions } from "../../hooks/useThreadActions";
 import {
   setDesktopUpdateStateQueryData,
   useDesktopUpdateState,
-} from "../../lib/desktopUpdateReactQuery";
+} from "../../runtime/desktopUpdateReactQuery";
 import {
   MAX_CUSTOM_MODEL_LENGTH,
   getCustomModelOptionsByProvider,
   resolveAppModelSelectionState,
-} from "../../modelSelection";
-import { ensureNativeApi, readNativeApi } from "../../nativeApi";
-import { useStore } from "../../store";
+} from "../../providers/modelSelection";
+import { ensureNativeApi, readNativeApi } from "../../runtime/nativeApi";
+import { useStore } from "../../state/store";
 import { formatRelativeTime, formatRelativeTimeLabel } from "../../timestampFormat";
 import { cn } from "../../lib/utils";
 import { Button } from "../ui/button";
@@ -57,7 +57,7 @@ import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "../
 import { Switch } from "../ui/switch";
 import { toastManager } from "../ui/toast";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "../ui/tooltip";
-import { ProjectFavicon } from "../ProjectFavicon";
+import { ProjectFavicon } from "../project/ProjectFavicon";
 import {
   useServerAvailableEditors,
   useServerKeybindingsConfigPath,

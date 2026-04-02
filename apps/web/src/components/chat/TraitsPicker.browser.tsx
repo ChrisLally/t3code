@@ -22,7 +22,7 @@ import {
   useComposerDraftStore,
   useComposerThreadDraft,
   useEffectiveComposerModelState,
-} from "../../composerDraftStore";
+} from "../../chat/composerDraftStore";
 import { DEFAULT_CLIENT_SETTINGS } from "@t3tools/contracts/settings";
 
 // ── Claude TraitsPicker tests ─────────────────────────────────────────

@@ -1,10 +1,10 @@
 import { type ApprovalRequestId } from "@t3tools/contracts";
 import { memo, useCallback, useEffect, useRef } from "react";
-import { type PendingUserInput } from "../../session-logic";
+import { type PendingUserInput } from "../../chat/session-logic";
 import {
   derivePendingUserInputProgress,
   type PendingUserInputDraftAnswer,
-} from "../../pendingUserInput";
+} from "../../chat/pendingUserInput";
 import { CheckIcon } from "lucide-react";
 import { cn } from "~/lib/utils";
 
